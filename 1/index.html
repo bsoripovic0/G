@@ -1,0 +1,94 @@
+<!doctype html><html lang="ru"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Пожелание от GALLERY</title>
+<meta name="theme-color" content="#1C2419">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Manrope:wght@300;400;500&display=swap">
+<style>
+:root{--ground:#F4F0E6;--paper:#FFFDF8;--ink:#2C3728;--soft:#5A6654;--gold:#B8964F;--hydr:#9BAFC6;--night:#161D14}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ground);color:var(--ink);font-family:Manrope,-apple-system,Segoe UI,sans-serif;-webkit-font-smoothing:antialiased}
+.hero{position:relative;height:100svh;min-height:520px;background:var(--night);overflow:hidden;display:grid}
+.hero video{grid-area:1/1;width:100%;height:100%;object-fit:cover}
+.shade{grid-area:1/1;background:linear-gradient(180deg,rgba(12,16,11,.55) 0%,rgba(12,16,11,0) 26%,rgba(12,16,11,0) 58%,rgba(12,16,11,.72) 100%)}
+.top{grid-area:1/1;align-self:start;justify-self:center;padding-top:calc(26px + env(safe-area-inset-top));text-align:center;color:#F6F2E9}
+.mark{font-family:'Cormorant Garamond',Georgia,serif;font-size:25px;letter-spacing:.34em;text-indent:.34em}
+.bq{margin-top:7px;font-size:8.5px;letter-spacing:.42em;text-indent:.42em;color:rgba(246,242,233,.72)}
+.sound{grid-area:1/1;align-self:end;justify-self:center;margin-bottom:calc(96px + env(safe-area-inset-bottom));
+  display:inline-flex;align-items:center;gap:9px;padding:11px 20px;border:1px solid rgba(246,242,233,.5);
+  border-radius:999px;background:rgba(14,19,13,.42);color:#F6F2E9;font-size:13px;letter-spacing:.02em;
+  cursor:pointer;backdrop-filter:blur(6px);transition:background .25s ease,opacity .3s ease}
+.sound:hover{background:rgba(14,19,13,.62)}
+.sound:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.sound[hidden]{display:none}
+.cue{grid-area:1/1;align-self:end;justify-self:center;margin-bottom:calc(26px + env(safe-area-inset-bottom));
+  color:rgba(246,242,233,.85);font-size:10px;letter-spacing:.28em;text-indent:.28em;text-align:center;text-decoration:none}
+.cue svg{display:block;margin:9px auto 0;animation:bob 2.1s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0);opacity:.75}50%{transform:translateY(5px);opacity:1}}
+.wish{position:relative;padding:64px 26px calc(56px + env(safe-area-inset-bottom));text-align:center;
+  background:radial-gradient(120% 55% at 50% 0%,#FBF8F1 0%,rgba(251,248,241,0) 62%),linear-gradient(180deg,#F6F2E9,#ECE6D9)}
+#petals{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.petal{position:absolute;top:-12%;border-radius:60% 40% 58% 42%;opacity:.4;animation:drift linear infinite}
+@keyframes drift{0%{transform:translate3d(0,-12%,0) rotate(0)}100%{transform:translate3d(24px,120vh,0) rotate(320deg)}}
+.inner{position:relative;max-width:420px;margin:0 auto}
+.hair{width:52px;height:1px;background:var(--gold);opacity:.6;margin:0 auto}
+h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:33px;line-height:1.26;margin-top:26px;text-wrap:balance}
+h1 em{font-style:italic;color:#4C5B47}
+p.t{margin-top:16px;font-size:16px;line-height:1.8;font-weight:300;color:var(--soft);text-wrap:balance}
+.leaf{margin:30px auto 0;display:block;opacity:.55}
+.sign{margin-top:22px;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:21px}
+.team{margin-top:9px;font-size:9px;letter-spacing:.32em;text-indent:.32em;color:var(--soft)}
+.foot{margin-top:26px;font-size:12.5px;color:var(--soft);display:flex;gap:10px;justify-content:center;align-items:center}
+.foot i{width:4px;height:4px;border-radius:50%;background:var(--hydr)}
+.r{opacity:0;transform:translateY(16px);transition:opacity .8s cubic-bezier(.22,.8,.3,1),transform .8s cubic-bezier(.22,.8,.3,1)}
+.r.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.r{opacity:1;transform:none;transition:none}.petal{display:none}.cue svg{animation:none}}
+</style></head><body>
+<section class="hero">
+  <video id="v" src="v.mp4" poster="p.jpg" autoplay muted playsinline preload="auto"></video>
+  <div class="shade"></div>
+  <div class="top"><div class="mark">GALLERY</div><div class="bq">FLOWER BOUTIQUE</div></div>
+  <button class="sound" id="snd" type="button">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+    Включить звук
+  </button>
+  <a class="cue" href="#w">ПОЖЕЛАНИЕ
+    <svg width="18" height="11" viewBox="0 0 18 11" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M1 1l8 8 8-8"/></svg>
+  </a>
+</section>
+<section class="wish" id="w">
+  <div id="petals" aria-hidden="true"></div>
+  <div class="inner">
+    <div class="hair r"></div>
+    <h1 class="r">Для вас —<br><em>наши пожелания</em></h1>
+    <p class="t r">Пусть этот день останется таким же тёплым и красивым, как цветы в ваших руках.</p>
+    <p class="t r">И пусть поводов для таких букетов в вашей жизни было больше.</p>
+    <svg class="leaf r" width="128" height="16" viewBox="0 0 128 16" fill="none" stroke="#B8964F" stroke-width="1" aria-hidden="true"><path d="M0 8h46M82 8h46"/><path d="M64 2.2c5.2 2.5 6.8 7.5 0 11.6-6.8-4.1-5.2-9.1 0-11.6Z"/></svg>
+    <div class="sign r">С уважением,</div>
+    <div class="team r">КОМАНДА GALLERY FLOWER BOUTIQUE</div>
+    <div class="foot r"><span>@gallery.flowers</span><i></i><span>Ташкент</span></div>
+  </div>
+</section>
+<script>
+(function(){
+  var v=document.getElementById('v'), snd=document.getElementById('snd');
+  v.play().catch(function(){});
+  snd.addEventListener('click',function(){ v.muted=false; v.volume=1; v.play(); snd.hidden=true; });
+  v.addEventListener('ended',function(){ document.getElementById('w').scrollIntoView({behavior:'smooth'}); });
+  var items=[].slice.call(document.querySelectorAll('.r'));
+  if(!('IntersectionObserver' in window)){ items.forEach(function(el){el.classList.add('on')}); }
+  else{
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ var i=items.indexOf(e.target);
+        e.target.style.transitionDelay=(i*90)+'ms'; e.target.classList.add('on'); io.unobserve(e.target);} });
+    },{threshold:.25});
+    items.forEach(function(el){io.observe(el)});
+  }
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var tones=['#C6D3C3','#E6DAC7','#D8C6C2','#B9C8D6'], h='';
+  for(var i=0;i<14;i++){ var w=(9+Math.random()*8).toFixed(1);
+    h+='<div class="petal" style="left:'+(Math.random()*100).toFixed(1)+'%;width:'+w+'px;height:'+(w*1.45).toFixed(1)+'px;background:'+tones[i%4]+';animation-duration:'+(12+Math.random()*10).toFixed(1)+'s;animation-delay:-'+(Math.random()*16).toFixed(1)+'s"></div>'; }
+  document.getElementById('petals').innerHTML=h;
+})();
+</script></body></html>
