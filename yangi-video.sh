@@ -10,7 +10,7 @@
 set -euo pipefail
 
 SITE="$HOME/gallery-qr-site"
-TOOLS="/private/tmp/claude-501/-Users-shukurullayevbilol/8aa47248-7fa8-46ce-a8b2-debcf10cf965/scratchpad/gallery"
+TOOLS="$SITE/tpl"        # shablonlar shu yerda (repo ichida, yo'qolmaydi)
 OUT="$HOME/Desktop/GALLERY-QR"
 PY="/tmp/qrenv/bin/python"
 CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"

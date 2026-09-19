@@ -1,0 +1,234 @@
+<!doctype html><html lang="ru"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>GALLERY Flower Boutique</title>
+<meta name="theme-color" content="#F6F2E9">
+<meta property="og:title" content="Для вас — видео от GALLERY">
+<meta property="og:description" content="Цветочный бутик GALLERY, Ташкент">
+<link rel="icon" href="../em-navy.svg">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap">
+<style>
+:root{--cream:#F6F2E9;--cream-2:#EFEADC;--paper:#FFFDF8;--navy:#16225A;--navy-ink:#1B2140;
+      --gold:#C9A550;--gold-soft:#E2C275;--soft:#5D6484;--r:22px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{overflow-x:hidden;background:var(--cream);color:var(--navy-ink);
+  font-family:Manrope,-apple-system,Segoe UI,sans-serif;-webkit-font-smoothing:antialiased}
+img,video{border-radius:var(--r)}
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;align-items:center;
+  padding:calc(22px + env(safe-area-inset-top)) 18px calc(20px + env(safe-area-inset-bottom));
+  background:radial-gradient(120% 60% at 50% 0%,#FCFAF4 0%,rgba(252,250,244,0) 58%),
+    linear-gradient(180deg,#F8F5EC 0%,var(--cream) 60%,var(--cream-2) 100%)}
+.brand{display:flex;flex-direction:column;align-items:center;gap:8px}
+.brand img{width:46px;height:auto;border-radius:0}
+.wordmark{font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;letter-spacing:.3em;text-indent:.3em;color:var(--navy)}
+.bq{font-size:8px;letter-spacing:.42em;text-indent:.42em;color:var(--soft)}
+.hair{width:46px;height:1px;background:var(--gold);opacity:.7;margin-top:12px}
+.screen{flex:1;width:100%;max-width:394px;margin-top:16px;display:flex;align-items:center;justify-content:center}
+.screen video{width:100%;height:auto;max-height:64svh;object-fit:contain;background:#E7E2D6;
+  box-shadow:0 22px 48px -22px rgba(22,34,90,.55);outline:1px solid rgba(22,34,90,.1);outline-offset:-1px}
+.tools{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:16px}
+.sound{display:inline-flex;align-items:center;gap:9px;padding:11px 20px;border:1px solid rgba(22,34,90,.28);
+  border-radius:999px;background:var(--paper);color:var(--navy);font-size:13px;cursor:pointer;font-family:inherit;
+  box-shadow:0 8px 20px -12px rgba(22,34,90,.5)}
+.sound[hidden]{display:none}
+.sound:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.cue{color:var(--soft);font-size:9.5px;letter-spacing:.26em;text-indent:.26em;text-decoration:none;text-align:center}
+.cue svg{display:block;margin:7px auto 0;animation:bob 2.1s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0);opacity:.6}50%{transform:translateY(5px);opacity:1}}
+section.band{position:relative;padding:56px 24px 50px;text-align:center;overflow:hidden}
+.wish{background:radial-gradient(120% 50% at 50% 0%,#FCFAF4 0%,rgba(252,250,244,0) 60%),linear-gradient(180deg,#F8F5EC,#F1ECDF)}
+#petals{position:absolute;inset:0;pointer-events:none}
+.petal{position:absolute;top:-12%;border-radius:60% 40% 58% 42%;opacity:.36;animation:drift linear infinite}
+@keyframes drift{0%{transform:translate3d(0,-12%,0) rotate(0)}100%{transform:translate3d(22px,130vh,0) rotate(320deg)}}
+.inner{position:relative;max-width:420px;margin:0 auto}
+.em{width:40px;border-radius:0;opacity:.92}
+h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:33px;line-height:1.26;margin-top:16px;text-wrap:balance;color:var(--navy)}
+h1 em{font-style:italic;color:#2C3A73}
+p.t{margin-top:15px;font-size:16px;line-height:1.8;font-weight:300;color:var(--soft);text-wrap:balance}
+.leaf{margin:26px auto 0;display:block;opacity:.65}
+.sign{margin-top:18px;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:21px;color:var(--navy)}
+.team{margin-top:8px;font-size:9px;letter-spacing:.3em;text-indent:.3em;color:var(--soft)}
+
+/* ——— письмо ——— */
+.letter{background:linear-gradient(180deg,#F1ECDF,#EDE7D8)}
+.env{position:relative;margin:22px auto 0;max-height:300px;width:100%;max-width:360px;aspect-ratio:3/2;cursor:pointer;
+  background:none;border:0;padding:0;font-family:inherit;display:block}
+.env .body{position:absolute;inset:0;border-radius:16px;background:var(--paper);
+  box-shadow:0 18px 40px -22px rgba(22,34,90,.7);border:1px solid rgba(201,165,80,.55);overflow:hidden}
+.env .flap{position:absolute;left:0;right:0;top:0;height:52%;background:#F3EEE1;
+  clip-path:polygon(0 0,100% 0,50% 100%);border-bottom:1px solid rgba(201,165,80,.45);
+  transform-origin:top center;transition:transform .9s cubic-bezier(.3,.8,.3,1)}
+.env .seal{position:absolute;left:50%;top:44%;width:52px;height:52px;margin-left:-26px;border-radius:50%;
+  background:radial-gradient(circle at 34% 30%,#E7CE92,#C9A550 60%,#AF8C3E);
+  display:grid;place-items:center;box-shadow:0 6px 14px -6px rgba(22,34,90,.6);transition:opacity .5s ease}
+.env .seal img{width:28px;filter:brightness(0) invert(1);opacity:.92;border-radius:0}
+.env .hint{position:absolute;left:0;right:0;bottom:12px;font-size:11px;letter-spacing:.2em;color:var(--soft)}
+.env[data-open="1"] .flap{transform:rotateX(180deg)}
+.env[data-open="1"] .seal,.env[data-open="1"] .hint{opacity:0}
+.env.away{opacity:0;max-height:0;margin-top:0;pointer-events:none;
+  transition:opacity .5s ease .35s,max-height .6s ease .45s,margin-top .6s ease .45s}
+.note{max-width:420px;margin:0 auto;overflow:hidden;max-height:0;transition:max-height 1s ease}
+.note[data-open="1"]{max-height:640px}
+.sheet{margin-top:20px;background:var(--paper);border:1px solid rgba(201,165,80,.45);border-radius:18px;
+  padding:26px 22px 24px;box-shadow:0 16px 34px -24px rgba(22,34,90,.6)}
+.sheet p{font-family:Caveat,'Segoe Script',cursive;font-size:24px;line-height:1.55;color:#243063;
+  opacity:0;transform:translateY(8px);transition:opacity .7s ease,transform .7s ease}
+.sheet p+p{margin-top:12px}
+.sheet p.on{opacity:1;transform:none}
+.sheet .from{margin-top:18px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--navy)}
+
+.offer{background:linear-gradient(180deg,#EDE7D8 0%,#E9E2D1 100%);border-top:1px solid rgba(22,34,90,.08)}
+.kicker{font-size:9.5px;letter-spacing:.32em;text-indent:.32em;color:var(--gold)}
+h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:29px;line-height:1.3;margin-top:12px;color:var(--navy);text-wrap:balance}
+h2 em{font-style:italic;color:#2C3A73}
+.promo{margin-top:20px;border:1px dashed rgba(201,165,80,.75);border-radius:18px;padding:20px 18px;background:var(--paper)}
+.promo b{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:31px;font-weight:400;color:var(--gold)}
+.promo span{display:block;margin-top:6px;font-size:13.5px;line-height:1.65;color:var(--soft);font-weight:300}
+.promo .code{display:inline-block;margin-top:12px;padding:7px 16px;border-radius:999px;background:var(--navy);color:#F6F2E9;
+  font-weight:600;font-size:14px;letter-spacing:.14em}
+.acts{margin-top:22px;display:grid;gap:10px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;padding:15px 18px;border-radius:999px;
+  text-decoration:none;font-size:15px;font-weight:500;border:1px solid transparent;cursor:pointer;font-family:inherit}
+.btn-navy{background:var(--navy);color:#F6F2E9;box-shadow:0 12px 26px -16px rgba(22,34,90,.9)}
+.btn-line{border-color:rgba(22,34,90,.3);color:var(--navy);background:var(--paper)}
+.addr{margin-top:22px;font-size:13px;line-height:1.7;color:var(--soft);font-weight:300}
+.addr a{color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(201,165,80,.6)}
+.r{opacity:0;transform:translateY(16px);transition:opacity .8s cubic-bezier(.22,.8,.3,1),transform .8s cubic-bezier(.22,.8,.3,1)}
+.r.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.r{opacity:1;transform:none;transition:none}
+  .petal{display:none}.cue svg{animation:none}.env .flap{transition:none}}
+</style></head><body>
+<section class="hero">
+  <div class="brand">
+    <img src="../em-navy.svg" alt="GALLERY">
+    <div class="wordmark">GALLERY</div>
+    <div class="bq">FLOWER BOUTIQUE</div>
+    <div class="hair"></div>
+  </div>
+  <div class="screen"><video id="v" src="v.mp4" poster="p.jpg" autoplay playsinline preload="auto"></video></div>
+  <div class="tools">
+    <button class="sound" id="snd" type="button">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+      Включить звук
+    </button>
+    <a class="cue" href="#w">ПОЖЕЛАНИЕ
+      <svg width="18" height="11" viewBox="0 0 18 11" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M1 1l8 8 8-8"/></svg>
+    </a>
+  </div>
+</section>
+
+<section class="band wish" id="w">
+  <div id="petals" aria-hidden="true"></div>
+  <div class="inner">
+    <img class="em r" src="../em-navy.svg" alt="">
+    <h1 class="r">Для вас —<br><em>наши пожелания</em></h1>
+    <p class="t r">Пусть этот день останется таким же тёплым и красивым, как цветы в ваших руках.</p>
+    <p class="t r">И пусть поводов для таких букетов в вашей жизни было больше.</p>
+    <svg class="leaf r" width="128" height="16" viewBox="0 0 128 16" fill="none" stroke="#C9A550" stroke-width="1" aria-hidden="true"><path d="M0 8h46M82 8h46"/><path d="M64 2.2c5.2 2.5 6.8 7.5 0 11.6-6.8-4.1-5.2-9.1 0-11.6Z"/></svg>
+    <div class="sign r">С уважением,</div>
+    <div class="team r">КОМАНДА GALLERY FLOWER BOUTIQUE</div>
+  </div>
+</section>
+
+<section class="band letter">
+  <div class="inner">
+    <div class="kicker r">ВМЕСТЕ С ЦВЕТАМИ</div>
+    <h2 class="r">Вам письмо</h2>
+    <button class="env r" id="env" type="button" aria-expanded="false" aria-controls="note">
+      <span class="body"></span>
+      <span class="flap"></span>
+      <span class="seal"><img src="../em-gold.svg" alt=""></span>
+      <span class="hint">НАЖМИТЕ, ЧТОБЫ ОТКРЫТЬ</span>
+    </button>
+    <div class="note" id="note">
+      <div class="sheet">
+        <p>Кто-то выбирал эти цветы именно для вас.</p>
+        <p>Долго стоял перед витриной и думал,<br>какие вам понравятся.</p>
+        <p>Пусть они напоминают: о вас думают<br>и тогда, когда вы об этом не знаете.</p>
+        <p class="from">— GALLERY Flower Boutique</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band offer">
+  <div class="inner">
+    <div class="kicker r">ДЛЯ ТОГО, КТО ПОЛУЧИЛ ЭТОТ БУКЕТ</div>
+    <h2 class="r">Соберём такой же —<br><em>или лучше</em></h2>
+    <div class="promo r">
+      <b>&minus;10%</b>
+      <span>на первый заказ в GALLERY.<br>Назовите код при заказе.</span>
+      <span class="code">QR10</span>
+    </div>
+    <div class="acts">
+      <a class="btn btn-navy r" href="https://wa.me/998991870707">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.8-5.2A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+        Заказать букет
+      </a>
+      <a class="btn btn-line r" href="tel:+998991870707">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16.9v2.6a1.6 1.6 0 0 1-1.8 1.6 17.8 17.8 0 0 1-7.7-2.8 17.4 17.4 0 0 1-5.4-5.4A17.8 17.8 0 0 1 3.3 5.1 1.6 1.6 0 0 1 4.9 3.3h2.6a1.6 1.6 0 0 1 1.6 1.4c.1 1 .3 1.9.6 2.8a1.6 1.6 0 0 1-.4 1.7l-1 1a14 14 0 0 0 5.4 5.4l1-1a1.6 1.6 0 0 1 1.7-.4c.9.3 1.8.5 2.8.6a1.6 1.6 0 0 1 1.4 1.6Z"/></svg>
+        +998 99 187 07 07
+      </a>
+      <button class="btn btn-line r" id="share" type="button">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="m8.3 10.7 7.4-4.3M8.3 13.3l7.4 4.3"/></svg>
+        <span id="shtxt">Отправить другу</span>
+      </button>
+    </div>
+    <p class="addr r">Ташкент, Лабзак, 112<br><a href="https://wa.me/998991870707">WhatsApp</a> &middot; <a href="tel:+998991870707">+998 99 187 07 07</a></p>
+  </div>
+</section>
+
+<script>
+(function(){
+  var v=document.getElementById('v'), snd=document.getElementById('snd');
+  function unmuteOnce(){ v.muted=false; v.volume=1; v.play().catch(function(){}); snd.hidden=true; }
+  function fallback(){
+    v.muted=true; v.play().catch(function(){}); snd.hidden=false;
+    ['pointerdown','touchstart','keydown','scroll'].forEach(function(ev){
+      window.addEventListener(ev,unmuteOnce,{once:true,passive:true});
+    });
+  }
+  v.muted=false; v.volume=1;
+  var pr=v.play();
+  if(pr&&pr.catch){ pr.then(function(){ snd.hidden=true; }).catch(fallback); }
+  v.addEventListener('volumechange',function(){ if(!v.muted) snd.hidden=true; });
+  snd.addEventListener('click',unmuteOnce);
+  v.addEventListener('ended',function(){ document.getElementById('w').scrollIntoView({behavior:'smooth'}); });
+
+  var env=document.getElementById('env'), note=document.getElementById('note');
+  env.addEventListener('click',function(){
+    if(env.dataset.open) return;
+    env.dataset.open='1'; env.setAttribute('aria-expanded','true');
+    setTimeout(function(){ env.classList.add('away'); },700);
+    setTimeout(function(){
+      note.dataset.open='1';
+      var lines=note.querySelectorAll('p');
+      lines.forEach(function(p,i){ setTimeout(function(){ p.classList.add('on'); }, 260+i*900); });
+    },450);
+  });
+
+  var sh=document.getElementById('share');
+  sh.addEventListener('click',function(){
+    var d={title:'GALLERY Flower Boutique',text:'Для вас — видео с пожеланием',url:location.href};
+    if(navigator.share){ navigator.share(d).catch(function(){}); }
+    else if(navigator.clipboard){ navigator.clipboard.writeText(location.href);
+      document.getElementById('shtxt').textContent='Ссылка скопирована'; }
+  });
+
+  var items=[].slice.call(document.querySelectorAll('.r'));
+  if(!('IntersectionObserver' in window)){ items.forEach(function(el){el.classList.add('on')}); }
+  else{
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ var i=items.indexOf(e.target);
+        e.target.style.transitionDelay=((i%6)*85)+'ms'; e.target.classList.add('on'); io.unobserve(e.target); } });
+    },{threshold:.2});
+    items.forEach(function(el){io.observe(el)});
+  }
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var tones=['#D9CDA8','#C7CDDF','#E3D9C4','#B9C2DA'], h='';
+  for(var i=0;i<14;i++){ var w=(9+Math.random()*8).toFixed(1);
+    h+='<div class="petal" style="left:'+(Math.random()*100).toFixed(1)+'%;width:'+w+'px;height:'+(w*1.45).toFixed(1)+'px;background:'+tones[i%4]+';animation-duration:'+(12+Math.random()*10).toFixed(1)+'s;animation-delay:-'+(Math.random()*16).toFixed(1)+'s"></div>'; }
+  document.getElementById('petals').innerHTML=h;
+})();
+</script></body></html>
