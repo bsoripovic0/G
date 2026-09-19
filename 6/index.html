@@ -52,7 +52,7 @@ p.t{margin-top:15px;font-size:16px;line-height:1.8;font-weight:300;color:var(--s
 
 /* ——— письмо ——— */
 .letter{background:linear-gradient(180deg,#F1ECDF,#EDE7D8)}
-.env{position:relative;margin:22px auto 0;width:100%;max-width:360px;aspect-ratio:3/2;cursor:pointer;
+.env{position:relative;margin:22px auto 0;max-height:300px;width:100%;max-width:360px;aspect-ratio:3/2;cursor:pointer;
   background:none;border:0;padding:0;font-family:inherit;display:block}
 .env .body{position:absolute;inset:0;border-radius:16px;background:var(--paper);
   box-shadow:0 18px 40px -22px rgba(22,34,90,.7);border:1px solid rgba(201,165,80,.55);overflow:hidden}
@@ -66,6 +66,8 @@ p.t{margin-top:15px;font-size:16px;line-height:1.8;font-weight:300;color:var(--s
 .env .hint{position:absolute;left:0;right:0;bottom:12px;font-size:11px;letter-spacing:.2em;color:var(--soft)}
 .env[data-open="1"] .flap{transform:rotateX(180deg)}
 .env[data-open="1"] .seal,.env[data-open="1"] .hint{opacity:0}
+.env.away{opacity:0;max-height:0;margin-top:0;pointer-events:none;
+  transition:opacity .5s ease .35s,max-height .6s ease .45s,margin-top .6s ease .45s}
 .note{max-width:420px;margin:0 auto;overflow:hidden;max-height:0;transition:max-height 1s ease}
 .note[data-open="1"]{max-height:640px}
 .sheet{margin-top:20px;background:var(--paper);border:1px solid rgba(201,165,80,.45);border-radius:18px;
@@ -198,6 +200,7 @@ h2 em{font-style:italic;color:#2C3A73}
   env.addEventListener('click',function(){
     if(env.dataset.open) return;
     env.dataset.open='1'; env.setAttribute('aria-expanded','true');
+    setTimeout(function(){ env.classList.add('away'); },700);
     setTimeout(function(){
       note.dataset.open='1';
       var lines=note.querySelectorAll('p');
